@@ -156,14 +156,18 @@ class _RegisterWidgetState extends State<RegisterWidget> {
           margin: EdgeInsets.only(top: 40),
           child: ElevatedButton(
             onPressed: () async {
-            try {
-              final auth =
-                  await Api().register(namaController.text, emailController.text, passController.text, confirmpassController.text);
-              Navigator.pushReplacementNamed(context, '/home');
-            } catch (e) {
-              print(e);
-            }
-          },
+              try {
+                final auth = await Api().register(
+                    namaController.text,    
+                    emailController.text,
+                    passController.text,
+                    confirmpassController.text,
+                    );
+                Navigator.pushReplacementNamed(context, '/home');
+              } catch (e) {
+                print(e);
+              }
+            },
             style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(22)),

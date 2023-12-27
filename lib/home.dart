@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pbl_mobile/ChatScreen.dart';
+import 'package:pbl_mobile/ConsultationPage.dart';
+import 'package:pbl_mobile/MedicalRecord.dart';
+import 'package:pbl_mobile/grooming.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,16 +19,11 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    padding: EdgeInsets.only(bottom: 20, top: 30),
+                    padding: EdgeInsets.only(bottom: 20, top: 25),
                     child: Image.asset(
                       'assets/logo.png',
                     ),
                   ),
-                  Container(
-                      margin: EdgeInsets.only(left: 30, top: 20),
-                      child: Image.asset(
-                        "assets/profile.png",
-                      ))
                 ],
               ),
               Row(
@@ -33,17 +32,25 @@ class HomePage extends StatelessWidget {
                   Column(
                     children: [
                       Container(
-                        height: 50.0,
-                        width: 50.0,
-                        decoration: BoxDecoration(
-                            color: Color(0XFFBE83B2),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
-                        child: Icon(
-                          Icons.monitor_heart,
-                          color: Colors.white,
-                        ),
-                      ),
+                          height: 50.0,
+                          width: 50.0,
+                          decoration: BoxDecoration(
+                              color: Color(0XFFBE83B2),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10))),
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MedicalRecord()),
+                              );
+                            },
+                            child: Icon(
+                              Icons.monitor_heart,
+                              color: Colors.white,
+                            ),
+                          )),
                       Padding(padding: EdgeInsets.only(top: 8)),
                       Text(
                         "Records",
@@ -57,17 +64,25 @@ class HomePage extends StatelessWidget {
                   Column(
                     children: [
                       Container(
-                        height: 50.0,
-                        width: 50.0,
-                        decoration: BoxDecoration(
-                            color: Color(0XFFBE83B2),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
-                        child: Icon(
-                          Icons.bathroom,
-                          color: Colors.white,
-                        ),
-                      ),
+                          height: 50.0,
+                          width: 50.0,
+                          decoration: BoxDecoration(
+                              color: Color(0XFFBE83B2),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10))),
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Grooming()),
+                              );
+                            },
+                            child: Icon(
+                              Icons.bathroom,
+                              color: Colors.white,
+                            ),
+                          )),
                       Padding(padding: EdgeInsets.only(top: 8)),
                       Text(
                         "Grooming",
@@ -81,17 +96,25 @@ class HomePage extends StatelessWidget {
                   Column(
                     children: [
                       Container(
-                        height: 50.0,
-                        width: 50.0,
-                        decoration: BoxDecoration(
-                            color: Color(0XFFBE83B2),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
-                        child: Icon(
-                          Icons.vaccines_rounded,
-                          color: Colors.white,
-                        ),
-                      ),
+                          height: 50.0,
+                          width: 50.0,
+                          decoration: BoxDecoration(
+                              color: Color(0XFFBE83B2),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10))),
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MedicalRecord()),
+                              );
+                            },
+                            child: Icon(
+                              Icons.vaccines_rounded,
+                              color: Colors.white,
+                            ),
+                          )),
                       Padding(padding: EdgeInsets.only(top: 8)),
                       Text(
                         "Vaccine",
@@ -105,17 +128,25 @@ class HomePage extends StatelessWidget {
                   Column(
                     children: [
                       Container(
-                        height: 50.0,
-                        width: 50.0,
-                        decoration: BoxDecoration(
-                            color: Color(0XFFBE83B2),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
-                        child: Icon(
-                          Icons.assignment_add,
-                          color: Colors.white,
-                        ),
-                      ),
+                          height: 50.0,
+                          width: 50.0,
+                          decoration: BoxDecoration(
+                              color: Color(0XFFBE83B2),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10))),
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ChatScreen()),
+                              );
+                            },
+                            child: Icon(
+                              Icons.assignment_add,
+                              color: Colors.white,
+                            ),
+                          )),
                       Padding(padding: EdgeInsets.only(top: 8)),
                       Text(
                         "Consultation",
@@ -129,17 +160,25 @@ class HomePage extends StatelessWidget {
                   Column(
                     children: [
                       Container(
-                        height: 50.0,
-                        width: 50.0,
-                        decoration: BoxDecoration(
-                            color: Color(0XFFBE83B2),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
-                        child: Icon(
-                          Icons.person_sharp,
-                          color: Colors.white,
-                        ),
-                      ),
+                          height: 50.0,
+                          width: 50.0,
+                          decoration: BoxDecoration(
+                              color: Color(0XFFBE83B2),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10))),
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MedicalRecord()),
+                              );
+                            },
+                            child: Icon(
+                              Icons.person_sharp,
+                              color: Colors.white,
+                            ),
+                          )),
                       Padding(padding: EdgeInsets.only(top: 8)),
                       Text(
                         "Profile",
@@ -162,26 +201,27 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "My Pets",
+                    "Katalog",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: Color(0XFF818181),
+                      color: Color(0XFFBE83B2),
                     ),
                   ),
-                  Container(
-                      width: 25,
-                      height: 25,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Color(0XFFBE83B2),
+                  TextButton(
+                      child: Row(
+                        children: [
+                          Text(
+                            "Lainnya",
+                            style: TextStyle(
+                                fontSize: 15,
+                                color: Color.fromARGB(255, 145, 139, 139)),
+                          ),
+                          Icon(Icons.navigate_next_rounded,
+                              color: Color.fromARGB(255, 145, 139, 139)),
+                        ],
                       ),
-                      child: Center(
-                        child: Icon(
-                          Icons.add,
-                          color: Colors.white,
-                        ),
-                      ))
+                      onPressed: () {})
                 ],
               )
             ],
